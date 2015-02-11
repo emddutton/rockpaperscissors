@@ -1,0 +1,26 @@
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+.computer, .choose, .you {
+    float: left;
+    display: inline-block;
+    height: 400px;
+    text-align: center;
+}
+.computer {
+    width: 40%;
+}
+.choose {
+    width: 19%;
+    margin-top: 200px;
+}
+.you {
+    width: 40%;
+}
+button {
+    margin: 50px 10px 0 0px;
+    height: 30px;
+    width: 100px;
+
+}
