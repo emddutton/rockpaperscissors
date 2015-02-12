@@ -19,8 +19,15 @@
     width: 40%;
 }
 button {
-    margin: 50px 10px 0 0px;
+    margin: 150px 10px 0 0px;
     height: 30px;
     width: 100px;
+}
 
+.handshake {
+    margin-top: 100px;
+    position: relative;
+}
+.left, .right {
+    display: none;
 }
