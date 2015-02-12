@@ -27,7 +27,7 @@ $(document).ready(function() {
 
         if(this.id == 'rockbutton'){
             console.log("rock clicked");
-            $(".you").show(".right .rock");
+            $(".you > .rock").show();
         }
          else if(this.id == 'paperbutton'){
             console.log("paper clicked");
