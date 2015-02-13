@@ -5,10 +5,6 @@ $(document).ready(function() {
     var duration = 250;
     var shake = $(".handshake");
     var counter = $(".choose h2");
-    var rock = "rock.png";
-    var paper = "paper.png";
-    var scissors = "scissors.png";
-
 
     $("button").on('click', function(){
 
@@ -33,17 +29,15 @@ $(document).ready(function() {
                 console.log("rock clicked");
                 $(".you > .rock").show();
             }
-            else if(this.id == 'paperbutton'){
+            else if(thisClick.id == 'paperbutton'){
                 console.log("paper clicked");
-
+                $(".you > .paper").show();
             }
-            else if(this.id == 'scissorsbutton'){
+            else if(thisClick.id == 'scissorsbutton'){
                 console.log("scissors clicked");
-
+                $(".you > .scissors").show();
             }
         }, 1000);
-
-
 
 
 
