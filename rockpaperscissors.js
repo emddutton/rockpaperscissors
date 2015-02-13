@@ -17,29 +17,35 @@ $(document).ready(function() {
             shake.animate({top: "50px"}, duration);
             shake.animate({top: "0"}, duration);
             }
-            shake.hide(duration);
         }
 
         function countdown() {
             counter.remove();
 
         }
-
-        if(this.id == 'rockbutton'){
-            console.log("rock clicked");
-            $(".you > .rock").show();
-        }
-         else if(this.id == 'paperbutton'){
-            console.log("paper clicked");
-
-        }
-        else if(this.id == 'scissorsbutton'){
-            console.log("scissors clicked");
-
-        }
-
         handshake(duration);
         countdown(duration);
+
+        var thisClick = this;
+        setTimeout(function() {
+            shake.hide();
+            if((thisClick.id) == 'rockbutton'){
+                console.log("rock clicked");
+                $(".you > .rock").show();
+            }
+            else if(this.id == 'paperbutton'){
+                console.log("paper clicked");
+
+            }
+            else if(this.id == 'scissorsbutton'){
+                console.log("scissors clicked");
+
+            }
+        }, 1000);
+
+
+
+
 
     });
 
