@@ -20,22 +20,13 @@ $(document).ready(function() {
         countdown(duration);
         var thisClick = this;
         compChoice = choices[Math.floor(Math.random()*3)];
+        userChoice = this.id;
         console.log(compChoice);
             setTimeout(function() {
                 shake.hide();
                 $(".computer > .left." + compChoice).show();
-                if((thisClick.id) == 'rockbutton'){
-                    console.log("rock clicked");
-                    $(".you > .rock").show();
-                }
-                else if(thisClick.id == 'paperbutton'){
-                    console.log("paper clicked");
-                    $(".you > .paper").show();
-                }
-                else if(thisClick.id == 'scissorsbutton'){
-                    console.log("scissors clicked");
-                    $(".you > .scissors").show();
-                }
+                $(".you > .right." + userChoice).show();
+                
             }, 1000);
 
 
