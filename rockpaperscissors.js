@@ -33,10 +33,7 @@ $(document).ready(function() {
                     counter.show().text("You lose.");
                     console.log("loser");
                 }
-
             }, 1000);
-
-
     });
 
 });
