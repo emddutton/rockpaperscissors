@@ -5,40 +5,38 @@ $(document).ready(function() {
     var duration = 250;
     var shake = $(".handshake");
     var counter = $(".choose h2");
+    var choices = ["rock", "paper", "scissors"];
+    var userChoice, compChoice;
 
     $("button").on('click', function(){
 
-        function handshake(){
-            for(var i = 0; i < 3; i++) {
-            shake.animate({top: "50px"}, duration);
-            shake.animate({top: "0"}, duration);
+        shake.addClass('shake');
+
+           function countdown() {
+                counter.remove();
+
             }
-        }
 
-        function countdown() {
-            counter.remove();
-
-        }
-        handshake(duration);
         countdown(duration);
-
         var thisClick = this;
-        setTimeout(function() {
-            shake.hide();
-            if((thisClick.id) == 'rockbutton'){
-                console.log("rock clicked");
-                $(".you > .rock").show();
-            }
-            else if(thisClick.id == 'paperbutton'){
-                console.log("paper clicked");
-                $(".you > .paper").show();
-            }
-            else if(thisClick.id == 'scissorsbutton'){
-                console.log("scissors clicked");
-                $(".you > .scissors").show();
-            }
-        }, 1000);
-
+        compChoice = choices[Math.floor(Math.random()*3)];
+        console.log(compChoice);
+            setTimeout(function() {
+                shake.hide();
+                $(".computer > .left." + compChoice).show();
+                if((thisClick.id) == 'rockbutton'){
+                    console.log("rock clicked");
+                    $(".you > .rock").show();
+                }
+                else if(thisClick.id == 'paperbutton'){
+                    console.log("paper clicked");
+                    $(".you > .paper").show();
+                }
+                else if(thisClick.id == 'scissorsbutton'){
+                    console.log("scissors clicked");
+                    $(".you > .scissors").show();
+                }
+            }, 1000);
 
 
     });
