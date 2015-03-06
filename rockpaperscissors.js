@@ -7,8 +7,18 @@ $(document).ready(function() {
     var choices = ["rock", "paper", "scissors"];
     var userChoice, compChoice;
 
-    $("button").on('click', function(){
+    function reset(){
 
+        $(".computer > .left").hide();
+        $(".you > .right").hide();
+        counter.hide();
+        shake.show();
+    };
+
+
+
+    $("button").on('click', function(){
+        reset();
         shake.addClass('shake');
 
         counter.hide();
